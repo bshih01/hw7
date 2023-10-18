@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Products</title>
+    <style>
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .product-name {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="productsDisplay"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $.get('products.json', function(products) {
+        let output = '';
+        for(let productName in products) {
+            let product = products[productName];
+            output += '<div class="product">';
+            output += '<div class="product-name">' + productName + '</div>';
+            output += '<div>' + product.description + '</div>';
+            output += '<div>Size: ' + product.sizes.join(", ") + '</div>'; 
+            output += '<div>Price: ' + product.price + '</div>';
+            output += '<div>Categories: ' + product.categories.join(", ") + '</div>';
+            output += '</div>';
+        }
+        document.getElementById('productsDisplay').innerHTML = output;
+    });
+</script>
+
+</body>
+</html>

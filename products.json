@@ -1,0 +1,74 @@
+{
+    "Japan Sweatshirt": {
+        "description": "Pink sweatshirt with a hood with sakura tree picture",
+        "sizes": ["Small", "Medium", "Large"],
+        "price": "$35",
+        "categories": ["Clothing", "Cotton", "Cultural"]
+    },
+    "Leather Boots": {
+        "description": "High-quality leather boots for hiking",
+        "sizes": ["Small", "Medium", "Large"],
+        "price": "$150",
+        "categories": ["Footwear", "Hiking", "Durable"]
+    },
+    "Sports Cap": {
+        "description": "Cap for outdoor activities",
+        "sizes": ["Small", "Medium", "Large"],
+        "price": "$15",
+        "categories": ["Sportswear", "Light-weight", "Sun Protection"]
+    },
+    "Classic Wristwatch": {
+        "description": "Stainless steel analog watch with a black dial",
+        "sizes": ["Small", "Medium", "Large"],
+        "price": "$120",
+        "categories": ["Accessories", "Timepiece", "Collectible"]
+    },
+    "Leather Bag": {
+        "description": "Shoulder bag with multiple compartments",
+        "sizes": ["Small", "Medium", "Large"],
+        "price": ["$80", "$90", "$100"],
+        "categories": ["Accessories", "Eco-friendly", "Leather"]
+    },
+    "Wireless Earbuds": {
+        "description": "Bluetooth noise-cancelling earbuds with charging case",
+        "sizes": ["Standard", "Pro Size"],
+        "price": ["$75", "$100"],
+        "categories": ["Electronics", "Audio", "Music"]
+    },
+    "Yoga Mat": {
+        "description": "Cushioned yoga mat for exercise and meditation",
+        "sizes": ["Standard", "Long", "Extra Long"],
+        "price": ["$25", "$30", "$40"],
+        "categories": ["Fitness", "Meditation", "Health"]
+    },
+    "Watercolor Paint Kit": {
+        "description": "Set of watercolor paints with brushes",
+        "sizes": ["6 Colorset", "12 Colorset", "24 Colorset"],
+        "price": ["$10", "$15", "$25"],
+        "categories": ["Arts", "Supplies", "Creativity"]
+    },
+    "Graphic T-Shirt": {
+        "description": "Soft cotton T-shirt with a unique graphic design",
+        "sizes": ["Small", "Medium", "Large", "X-Large"],
+        "price": "$20",
+        "categories": ["Clothing", "Casual", "Printed"]
+    },
+    "Acoustic Guitar": {
+        "description": "Wooden acoustic guitar with steel strings",
+        "sizes": ["Standard", "Travel", "Jumbo"],
+        "price": "$180",
+        "categories": ["Instruments", "Music", "Entertainment"]
+    },
+    "Digital Camera": {
+        "description": "High-resolution digital camera with optical zoom",
+        "sizes": ["Compact", "Medium", "Pro"],
+        "price": "$250",
+        "categories": ["Electronics", "Photography", "Travel"]
+    },
+    "Fitness Tracker": {
+        "description": "Wearable fitness tracker with heart rate monitor",
+        "sizes": ["Small", "Medium", "Large"],
+        "price": "$65",
+        "categories": ["Health", "Wearable", "Tech"]
+    }
+}

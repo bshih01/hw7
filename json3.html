@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Products by Category</title>
+    <style>
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <form id="filterForm">
+        <label for="categorySelect">Choose a category:</label>
+        <select id="categorySelect"></select>
+        <button type="button" id="filterBtn">Filter</button>
+    </form>
+
+    <div id="filteredProductsDisplay"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let productsData = {};
+
+            $.get('products.json', function(products) {
+                productsData = products;
+
+                let categoriesSet = new Set();
+                for(let productName in productsData) {
+                    productsData[productName].categories.forEach(cat => categoriesSet.add(cat));
+                }
+
+                categoriesSet.forEach(cat => {
+                    $('#categorySelect').append($('<option>', {
+                        value: cat,
+                        text: cat
+                    }));
+                });
+            });
+
+            $('#filterBtn').click(function() {
+                const selectedCategory = $('#categorySelect').val();
+                let output = '';
+                for(let productName in productsData) {
+                    if (productsData[productName].categories.includes(selectedCategory)) {
+                        output += '<div class="product">' + 
+                                  productName + 
+                                  '</div>';
+                    }
+                }
+                $('#filteredProductsDisplay').html(output);
+            });
+        });
+    </script>
+</body>
+</html>
